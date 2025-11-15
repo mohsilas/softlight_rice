@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PICTURES_FOLDER="/home/heartmachine/Pictures/colors"
-OUTPUT_FILE="/home/heartmachine/.config/myscripts/bg.txt"
+PICTURES_FOLDER="/home/username/Pictures/colors"
+OUTPUT_FILE="/home/username/.config/myscripts/bg.txt"
 
 if [ ! -d "$PICTURES_FOLDER" ]; then
   exit 1
