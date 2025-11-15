@@ -1,7 +1,8 @@
 #!/bin/bash
+# this scripts picks a second image to overlay on the background, in this case, a shadow png
 
-PICTURES_FOLDER="/home/heartmachine/Pictures/shadows"
-OUTPUT_FILE="/home/heartmachine/.config/myscripts/sd.txt"
+PICTURES_FOLDER="/home/username/Pictures/shadows"
+OUTPUT_FILE="/home/username/.config/myscripts/sd.txt"
 
 if [ ! -d "$PICTURES_FOLDER" ]; then
   exit 1
