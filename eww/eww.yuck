@@ -3,14 +3,14 @@
 (defpoll WORKSPACE :initial "1" :interval "1s" "hyprctl activewindow | grep -oP \'workspace:\\s*\\K\\d+\'")
 
 ;; SCRIPTS VAR
-(defpoll BLUSTAT :interval "10s" "bash /home/heartmachine/.config/myscripts/blu_status.sh")
-;; (defpoll BLUBAT :interval "10s" "bash /home/heartmachine/.config/myscripts/blu_battery.sh")
-(defpoll PLYR :interval "10s" "bash /home/heartmachine/.config/myscripts/ply.sh")
-(defpoll CLOUD :interval "5m" "bash /home/heartmachine/.config/myscripts/cloud.sh")
-(defpoll VPN :interval "10s" "bash /home/heartmachine/.config/myscripts/vpn.sh")
-(defpoll WIFI :interval "10s" "bash /home/heartmachine/.config/myscripts/wifi.sh")
-(defpoll BATT :interval "10s" "bash /home/heartmachine/.config/myscripts/battery.sh")
-(defpoll MEM :interval "10s" "bash /home/heartmachine/.config/myscripts/mem.sh")
+(defpoll BLUSTAT :interval "10s" "bash myscripts/.config/myscripts/blu_status.sh")
+;; (defpoll BLUBAT :interval "10s" "bash myscripts/.config/myscripts/blu_battery.sh")
+(defpoll PLYR :interval "10s" "bash myscripts/.config/myscripts/ply.sh")
+(defpoll CLOUD :interval "5m" "bash myscripts/.config/myscripts/cloud.sh")
+(defpoll VPN :interval "10s" "bash myscripts/.config/myscripts/vpn.sh")
+(defpoll WIFI :interval "10s" "bash myscripts/.config/myscripts/wifi.sh")
+(defpoll BATT :interval "10s" "bash myscripts/.config/myscripts/battery.sh")
+(defpoll MEM :interval "10s" "bash myscripts/.config/myscripts/mem.sh")
 
 ;; TIME VARS
 (defpoll TIME :interval "10s" "date '+%H:%M'")
