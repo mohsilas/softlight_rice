@@ -11,6 +11,7 @@ Vicinae: Main menu, with default light theme for a clean look.
 Firefox: Nightfox theme with light mode enabled.
 
 Kitty: Default Dayfox theme.
+
 icons: [Fluent-yellow](https://www.pling.com/p/1477945)
 
 ## screenshots
