@@ -16,3 +16,6 @@ icons: [Fluent-yellow](https://www.pling.com/p/1477945)
 
 ## screenshots
 <img width="2560" height="1600" alt="2025-11-15_17-23-06" src="https://github.com/user-attachments/assets/db90b917-a1a2-4bb7-b7a8-5749dbf649d1" />
+<img width="2560" height="1600" alt="2025-11-15_17-52-09" src="https://github.com/user-attachments/assets/ef8d0ad0-643c-4ecf-8ad4-d33002abad68" />
+<img width="2560" height="1600" alt="2025-11-15_18-12-11" src="https://github.com/user-attachments/assets/7c39d0c0-d70f-499a-bcce-a92cccb09416" />
+
