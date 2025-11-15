@@ -1,0 +1,90 @@
+
+;; SYS VARS
+(defpoll WORKSPACE :initial "1" :interval "1s" "hyprctl activewindow | grep -oP \'workspace:\\s*\\K\\d+\'")
+
+;; SCRIPTS VAR
+(defpoll BLUSTAT :interval "10s" "bash /home/heartmachine/.config/myscripts/blu_status.sh")
+;; (defpoll BLUBAT :interval "10s" "bash /home/heartmachine/.config/myscripts/blu_battery.sh")
+(defpoll PLYR :interval "10s" "bash /home/heartmachine/.config/myscripts/ply.sh")
+(defpoll CLOUD :interval "5m" "bash /home/heartmachine/.config/myscripts/cloud.sh")
+(defpoll VPN :interval "10s" "bash /home/heartmachine/.config/myscripts/vpn.sh")
+(defpoll WIFI :interval "10s" "bash /home/heartmachine/.config/myscripts/wifi.sh")
+(defpoll BATT :interval "10s" "bash /home/heartmachine/.config/myscripts/battery.sh")
+(defpoll MEM :interval "10s" "bash /home/heartmachine/.config/myscripts/mem.sh")
+
+;; TIME VARS
+(defpoll TIME :interval "10s" "date '+%H:%M'")
+(defpoll DATE :interval "30m" "date '+%a %b %d'")
+
+;; FILE VARS
+(defpoll TODO :interval "15s" 'cat ~/todo.txt')
+
+;; ===============================================================
+;; HUD ===========================================================
+(defwindow hud
+           :monitor 0
+           :geometry (geometry :x "0px"
+                               :y "0px"
+                               :width "100px"
+                               :height "200px"
+                               :anchor "top center")
+           :stacking "bg"
+           :windowtype "normal"
+           :exclusive false
+
+           (box
+           :orientation "v"
+           :spacing 5
+           :space-evenly false
+           (clock_widget)
+           ;(media_info)
+           (sys_ind)
+           (todo_list)))
+
+
+(defwidget clock_widget []
+  (box
+    :orientation "v"
+    :spacing -50
+    (label :class "clock_date" :text DATE)
+    (label :class "clock_time" :text TIME)))
+
+
+;(defwidget media_info []
+;  (label :class "sys_i_txt" :text PLYR))
+
+
+
+(defwidget sys_ind []
+  (box
+    :orientation "h"
+    :spacing 10
+    :space-evenly false
+    :halign "center"
+  (label :class "sys_i_txt" :text BLUSTAT)
+  ;; (label :class "sys_i_txt" :text BLUBAT)
+  (label :class "sys_i_txt" :text PLYR)
+  (label :class "sys_i_txt" :text WIFI)
+  (label :class "sys_i_txt" :text CLOUD)
+  (label :class "sys_i_txt" :text VPN)
+  (label :class "sys_i_txt" :text BATT)
+  (label :class "sys_i_txt" :text MEM)
+  ))
+ 
+
+
+(defwidget todo_list []
+  (label :class "todo_l_txt" :text TODO))
+;; ===============================================================
+;; workspace =====================================================
+
+(defwindow work-space
+  :monitor 0
+  :stacking "bg"
+  :geometry (geometry :x "20px" :y "-20px" :width "50px" :anchor "top right")
+  (work_space))
+
+(defwidget work_space []
+  (label :class "ws_txt" :text WORKSPACE))
+
+

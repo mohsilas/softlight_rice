@@ -1,0 +1,48 @@
+.hud {
+  color: rgba(0, 0, 0, 0.8);
+  background: none;
+  margin: 0 0 0 0;
+  font-family: space mono;
+}
+
+
+
+.work-space {
+  color: rgba(50, 50, 50, 0.1);
+  background: none;
+  margin: 0 0 0 0;
+  font-weight: bold;
+  font-style: italic;
+  font-family: space mono;
+  text-shadow:
+    1px 1px 2px rgba(0, 0, 0, 0.01), /* Darker shadow for depth */
+    -1px -1px 2px rgba(255, 255, 255, 0.02); /* Lighter shadow to simulate carving */
+}
+.ws_txt {
+  font-size: 80px;
+}
+
+
+
+.clock_date {
+  font-size: 30px;
+}
+.clock_time {
+  font-size: 60px;
+}
+
+
+.sys_ind {
+  margin-top: 10px;
+}
+.sys_i_txt {
+  font-family: AdwaitaMono Nerd Font;
+  font-size: 12px;
+}
+
+
+.todo_l_txt {
+ margin-top: 10px; 
+ font-size: 12px;
+ font-weight: bold;
+}
